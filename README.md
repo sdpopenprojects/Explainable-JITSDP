@@ -1,7 +1,6 @@
 # General Introduction
 
 This repository provides the code and datasets used in this article - The impact of data sampling techniques on the interpretation of just-in-time software defect prediction.
-Authors: Zhiqiang Li, Qiannan Du, Feng Tian, Hongyu Zhang, and Xiao-Yuan Jing
 
 ### Environment Preparation
 
@@ -31,26 +30,20 @@ statsmodels    0. 12. 2
 
 - `./Explainable` : Code directory.
   
-  - `datasets`：The dataset of Just-In-Time Software Defedct Prediction(JIT-SDP).
-  - `demo-global.py`： Python code for conducting comparative experiments on three data sampling algorithms (under-sampling, over-sampling, and SMOTE) to interpret globally JIT-SDP models across 16 open-source software projects using a time-wise cross-validation setup. Two global interpretation techniques, Permutation and SHAP, were employed. Six classification models were utilized: Naive Bayes (NB), Random Forest (RF), K-Nearest Neighbors (KNN), Decision Tree (DT), Gradient Boosting Method (GBM), and Logistic Regression (LR).
-  - `demo-local.py`：Python code was developed to conduct comparative experiments on three data sampling algorithms (under-sampling, over-sampling, and SMOTE) to  interpret locally JIT-SDP models across 16 open-source software projects using a time-wise cross-validation setup. Two local  interpretation techniques, SHAP and LIME, were employed. Six classification models were utilized: Naive Bayes (NB), Random Forest (RF), K-Nearest Neighbors (KNN), Decision Tree (DT), Gradient Boosting Method (GBM), and Logistic Regression (LR).
+  - `datasets`：The JIT datasets
+  - `demo-global.py`: Python code for conducting comparative experiments on data sampling algorithms to globally explain JIT-SDP models
+  - `demo-local.py`：Python code was developed to conduct comparative experiments on data sampling algorithms to locally explain JIT-SDP models
   - `utilities`:  
-    - `tuneParameters.py`:  The Python code for parameter tuning of a model.
-    - `timewiseCV.py`:  The Python code for dividing data sets based on time series.
-    - `AutoSpearman.py`:  The Python code for eliminating metrics that are highly correlated and redundant.
-  - `output`：
-    - `gobal`
-         - `permutation_scores`:  The scores of  using  *Permutation* to interpret globally the  JIT-SDP  models when using different sampling techniques.
-         - `shap_scores`:   The scores of  using  *SHAP* to interpret globally the  JIT-SDP models when using different sampling techniques.
-    - `local`
-         - `lime_scores`:  The scores of  using  *LIME*  to interpret locally the  JIT-SDP models when using different sampling techniques.
-         - `shap_scores`:  The scores of  using  *SHAP* to interpret locally the JIT-SDP models when using different sampling techniques.
+    - `tuneParameters.py`: The Python code for parameter tuning of a model.
+    - `timewiseCV.py`: The Python code for dividing data sets based on time series.
+    - `AutoSpearman.py`: The Python code for eliminating metrics that are highly correlated and redundant.
   - `results`：
-    - `RQ1` : The results of  *Kendall’s Tau coefficient*,  *Top-1 overlap*,  and *Top-3 overlap* value using permutation feature importance and SHAP methods to interpret globally each JIT-SDP model between NONE and sampling algorithms across the datasets used.
-    - `RQ2` : The results of  features in  *Top 1 Rank* and *Top 3 Rank* using permutation and SHAP explanation methods to interpret globally each JIT-SDP model between NONE and sampling algorithms across the datasets used.
-    - `RQ3` : The results of  *average value of contribution* (size) and *ratio of contradictions* (direction) using  *LIME*  and *SHAP* to locally interpret the  JIT defect prediction models when using NONE and different sampling techniques.
-    - `Discuss` :The results of *Kendall’s Tau coefficient*, *Top-1 overlap*, and *Top-3 overlap* values between permutation feature importance and SHAP methods when interpreting globally each JIT-SDP model across the original datasets.  The results of  features in  *Top 1 Rank* and *Top 3 Rank* between permutation and SHAP explanation methods when interpreting globally each JIT-SDP model  across the original datasets. The results of  *average value of contribution* (size) and *ratio of contradictions* (direction) between  *LIME*  and *SHAP* when locally interpreting each JIT-SDP models across the original datasets.
-
+    - `RQ1` : The results of *Permutation* and *SHAP* methods to globally interpret JIT-SDP models
+    - `RQ2` : The top-ranked features of *Permutation* and *SHAP* methods to globally interpret JIT-SDP models
+    - `RQ3` : The results of *LIME* and *SHAP* to locally interpret JIT-SDP models
+    - `Discuss` : Compaison results between *Permutation* and *SHAP* methods
+                  Compaison results between *LIME* and *SHAP* methods
+      
 ### How to run
 
 - Modify the line in the file `./demo-global.py` , and  `./demo-local.py` , the line are as follows:
