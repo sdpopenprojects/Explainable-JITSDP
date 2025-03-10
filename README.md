@@ -42,7 +42,7 @@ statsmodels    0. 12. 2
     - `RQ2` : The top-ranked features of *Permutation* and *SHAP* methods to globally interpret JIT-SDP models
     - `RQ3` : The results of *LIME* and *SHAP* to locally interpret JIT-SDP models
     - `Discuss` : Compaison results between *Permutation* and *SHAP* methods
-                  Compaison results between *LIME* and *SHAP* methods
+    -             Compaison results between *LIME* and *SHAP* methods
       
 ### How to run
 
