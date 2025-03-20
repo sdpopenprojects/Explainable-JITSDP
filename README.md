@@ -1,6 +1,6 @@
 # General Introduction
 
-This repository provides the code and datasets used in this article - The impact of data sampling techniques on the interpretation of just-in-time software defect prediction.
+This repository provides the code and datasets used in this article - The effect of data sampling techniques on the interpretation of just-in-time software defect prediction.
 
 ### Environment Preparation
 
